@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "AlteHaasGroteskBold";
+  src: url("../fonts/AlteHaasGroteskBold.ttf");
+  font-weight: bold; }
+@font-face {
+  font-family: "AlteHaasGroteskRegular";
+  src: url("../fonts/AlteHaasGroteskRegular.ttf"); }
+.authorContainer {
+  position: absolute;
+  top: calc(100vh / 2);
+  left: calc((100vw / 2) - 180px);
+  z-index: 2;
+  user-select: none;
+  color: #fff; }
+  .authorContainer h1 {
+    font-family: "AlteHaasGroteskBold";
+    font-size: 32px;
+    color: #fff;
+    line-height: initial;
+    text-decoration: none;
+    /**/ }
+    @media only screen and (max-width: 550px) {
+      .authorContainer h1 {
+        /*mobile*/
+        font-family: "AlteHaasGroteskBold";
+        font-size: 23px;
+        color: #fff;
+        line-height: initial;
+        text-decoration: none;
+        /**/ } }
+  .authorContainer h2 {
+    font-family: "AlteHaasGroteskRegular";
+    font-size: 12px;
+    color: #fff;
+    line-height: initial;
+    text-decoration: none;
+    /**/ }
+    @media only screen and (max-width: 550px) {
+      .authorContainer h2 {
+        /*mobile*/
+        font-family: "AlteHaasGroteskRegular";
+        font-size: 13px;
+        color: #fff;
+        line-height: initial;
+        text-decoration: none;
+        /**/ } }
+  @media only screen and (max-width: 550px) {
+    .authorContainer {
+      /*mobile*/
+      left: calc((100vw / 2) - 130px); } }
+
+/*# sourceMappingURL=authorContainer.css.map */

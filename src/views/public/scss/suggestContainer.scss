@@ -1,0 +1,14 @@
+@import "vars";
+.suggestContainer{
+	position:absolute;
+	top:calc(97vh);
+	left:calc((100vw / 2) - 127px);
+	z-index:2;
+	user-select:none;
+	color:#fff;
+	font-family:$regularFont;
+	h2{
+		font-size:13px;
+		text-align:center;
+	}
+}

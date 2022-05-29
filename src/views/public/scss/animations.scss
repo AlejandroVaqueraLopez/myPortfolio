@@ -1,0 +1,48 @@
+//3d animations for scholarship elements
+.schoolImageHoverAnim:hover{
+	cursor:pointer;
+	transform:translateZ(10px) rotateX(20deg) rotateY(30deg);
+	img{
+		transform:translateX(40px) translateY(-10px) translateZ(50px);
+	}
+	@media only screen and (max-width:550px){
+		cursor:pointer;
+		transform:none;
+		img{
+			transform:none;
+		}
+	}
+}
+
+//3d animations for experience elements
+.experImageHoverAnim:hover{
+	cursor:pointer;
+	transform:translateZ(10px) rotateX(20deg) rotateY(30deg);
+	img{
+		transform:translateX(40px) translateY(-10px) translateZ(50px);
+	}
+	@media only screen and (max-width:1000px){
+		cursor:initial;
+		transform:none;
+		img{
+			transform:none;
+		}
+	}
+}
+
+//3d animations for profile photo 
+.profImageHoverAnim:hover{
+	cursor:pointer;
+	transform:translateZ(10px) rotateX(20deg) rotateY(30deg);
+	img{
+		transform:translateX(45px) translateY(-12px) translateZ(50px);
+	}
+	@media only screen and (max-width:1000px){
+		cursor:initial;
+		transform:none;
+		img{
+			transform:none;
+		}
+	}
+}
+

@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "AlteHaasGroteskBold";
+  src: url("../fonts/AlteHaasGroteskBold.ttf");
+  font-weight: bold; }
+@font-face {
+  font-family: "AlteHaasGroteskRegular";
+  src: url("../fonts/AlteHaasGroteskRegular.ttf"); }
+/*from 0px -> 550px mobile*/
+/*from 551px -> 1000px tablet or mini-laptop*/
+/*from 1001px -> 1599px is normal size*/
+/*from 1600px -> ~px big-screen*/
+.contactContainer {
+  width: 70%;
+  height: 500px;
+  position: absolute;
+  z-index: 2;
+  top: 1100vh;
+  transition: opacity ease-in-out 0.7s;
+  left: calc((100vw / 2) - 35%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+  /*for backdrop*/
+  backdrop-filter: blur(8px);
+  /*not working on firefox*/
+  border-radius: 10px;
+  /*for backdrop*/
+  box-sizing: border-box;
+  /*for backdrop*/ }
+  @media only screen and (max-width: 550px) {
+    .contactContainer {
+      width: 90%;
+      /**/
+      left: calc((100vw / 2) - 45%);
+      /**/ } }
+  .contactContainer .experienceCentering {
+    /*this sets a max-width size*/
+    height: 500px;
+    max-width: 1250px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media only screen and (max-width: 1000px) {
+      .contactContainer .experienceCentering {
+        flex-direction: column; } }
+    .contactContainer .experienceCentering .contactForm {
+      width: 60%;
+      height: 300px;
+      margin-right: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      @media only screen and (max-width: 1000px) {
+        .contactContainer .experienceCentering .contactForm {
+          width: calc(100% - 20px);
+          height: 80%;
+          margin-right: 0px; } }
+      @media only screen and (max-width: 550px) {
+        .contactContainer .experienceCentering .contactForm {
+          width: calc(100% - 20px);
+          height: 70%;
+          margin-right: 0px; } }
+      .contactContainer .experienceCentering .contactForm .formGroup {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box; }
+        .contactContainer .experienceCentering .contactForm .formGroup input {
+          width: 100%;
+          height: 40px;
+          background: none;
+          padding: 7px 10px;
+          box-sizing: border-box;
+          border: none;
+          border-bottom: 1px solid #fff;
+          font-family: "AlteHaasGroteskRegular";
+          font-size: 18px;
+          color: #fff;
+          line-height: initial;
+          text-decoration: none; }
+          .contactContainer .experienceCentering .contactForm .formGroup input:focus {
+            outline: none; }
+          @media only screen and (max-width: 550px) {
+            .contactContainer .experienceCentering .contactForm .formGroup input {
+              font-family: "AlteHaasGroteskRegular";
+              font-size: 15px;
+              color: #fff;
+              line-height: initial;
+              text-decoration: none; } }
+        .contactContainer .experienceCentering .contactForm .formGroup textarea {
+          width: 100%;
+          height: 150px;
+          background: none;
+          padding: 7px 10px;
+          box-sizing: border-box;
+          border: none;
+          border-bottom: 1px solid #fff;
+          resize: none;
+          font-family: "AlteHaasGroteskRegular";
+          font-size: 18px;
+          color: #fff;
+          line-height: initial;
+          text-decoration: none; }
+          .contactContainer .experienceCentering .contactForm .formGroup textarea:focus {
+            outline: none; }
+          @media only screen and (max-width: 1000px) {
+            .contactContainer .experienceCentering .contactForm .formGroup textarea {
+              height: 220px; } }
+          @media only screen and (max-width: 550px) {
+            .contactContainer .experienceCentering .contactForm .formGroup textarea {
+              height: 180px;
+              font-family: "AlteHaasGroteskRegular";
+              font-size: 15px;
+              color: #fff;
+              line-height: initial;
+              text-decoration: none; } }
+    .contactContainer .experienceCentering ul {
+      width: 30%;
+      height: 300px;
+      margin-left: 20px;
+      display: flex;
+      align-items: center; }
+      @media only screen and (max-width: 1000px) {
+        .contactContainer .experienceCentering ul {
+          width: calc(100% - 20px);
+          height: 10%;
+          margin-left: 0px; } }
+      @media only screen and (max-width: 550px) {
+        .contactContainer .experienceCentering ul {
+          width: calc(100% - 20px);
+          height: 20%;
+          margin-left: 0px; } }
+      .contactContainer .experienceCentering ul .socialContainer {
+        height: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+        @media only screen and (max-width: 1000px) {
+          .contactContainer .experienceCentering ul .socialContainer {
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); } }
+        .contactContainer .experienceCentering ul .socialContainer li {
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 15px; }
+          .contactContainer .experienceCentering ul .socialContainer li a img {
+            width: 60px;
+            height: 60px; }
+            @media only screen and (max-width: 1000px) {
+              .contactContainer .experienceCentering ul .socialContainer li a img {
+                width: 30px;
+                height: 30px; } }
+
+/*# sourceMappingURL=contactContainer.css.map */

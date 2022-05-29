@@ -1,0 +1,14 @@
+@mixin setText($fontFamily,$fontSize,$fontColor,$lineHeight,$textDecoration){
+	font-family:$fontFamily;
+	font-size:$fontSize;
+	color:$fontColor;
+	line-height:$lineHeight;
+	text-decoration:$textDecoration;
+}
+
+@mixin setBackground($backImage,$backSize,$backPosition){
+	background-image:url($backImage);
+	background-size:$backSize;
+	background-position:$backPosition;
+}
+

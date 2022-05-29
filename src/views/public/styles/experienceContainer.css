@@ -1,0 +1,481 @@
+@font-face {
+  font-family: "AlteHaasGroteskBold";
+  src: url("../fonts/AlteHaasGroteskBold.ttf");
+  font-weight: bold; }
+@font-face {
+  font-family: "AlteHaasGroteskRegular";
+  src: url("../fonts/AlteHaasGroteskRegular.ttf"); }
+/*from 0px -> 550px mobile*/
+/*from 551px -> 1000px tablet or mini-laptop*/
+/*from 1001px -> 1599px is normal size*/
+/*from 1600px -> ~px big-screen*/
+.experienceContainer {
+  width: 70%;
+  height: 500px;
+  position: absolute;
+  z-index: 2;
+  top: 500vh;
+  transition: opacity ease-in-out 0.7s;
+  left: calc((100vw / 2) - 35%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.2);
+  /*for backdrop*/
+  backdrop-filter: blur(8px);
+  /*not working on firefox*/
+  border-radius: 10px;
+  /*for backdrop*/
+  padding-left: 20px;
+  /*for backdrop*/
+  box-sizing: border-box;
+  /*for backdrop*/ }
+  @media only screen and (max-width: 550px) {
+    .experienceContainer {
+      width: 90%;
+      /**/
+      left: calc((100vw / 2) - 45%);
+      /**/ } }
+  .experienceContainer .experienceCentering {
+    /*this sets a max-width size*/
+    height: 500px;
+    max-width: 1250px;
+    position: relative; }
+    .experienceContainer .experienceCentering .controlsContainer {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      height: 100%;
+      width: 10%;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .experienceContainer .experienceCentering .controlsContainer .upArrow, .experienceContainer .experienceCentering .controlsContainer .downArrow {
+        width: 60%;
+        height: 50px;
+        background: none;
+        border: none;
+        opacity: 0.5;
+        background-image: url("../icons/arrow-icon.png");
+        background-size: cover;
+        background-position: center;
+        transition: all 0.5s;
+        margin: 5px 0px; }
+        .experienceContainer .experienceCentering .controlsContainer .upArrow:hover, .experienceContainer .experienceCentering .controlsContainer .downArrow:hover {
+          cursor: pointer; }
+      .experienceContainer .experienceCentering .controlsContainer .upArrow {
+        transform: rotate(180deg); }
+        .experienceContainer .experienceCentering .controlsContainer .upArrow:hover {
+          opacity: 1; }
+      .experienceContainer .experienceCentering .controlsContainer .downArrow:hover {
+        opacity: 1; }
+    .experienceContainer .experienceCentering ul {
+      height: auto;
+      width: 90%;
+      margin: 0px;
+      /*auto-setted*/
+      padding: 0px;
+      /*auto-setted*/ }
+      .experienceContainer .experienceCentering ul li {
+        width: 100%;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; }
+        @media only screen and (max-width: 1000px) {
+          .experienceContainer .experienceCentering ul li {
+            /*laptop and tablet*/
+            align-items: flex-start;
+            /**/
+            justify-content: center;
+            /**/ } }
+        .experienceContainer .experienceCentering ul li .experienceContent {
+          height: 300px;
+          width: 100%;
+          display: flex;
+          align-items: flex-start; }
+          @media only screen and (min-width: 1600px) {
+            .experienceContainer .experienceCentering ul li .experienceContent {
+              /*big screen*/
+              height: 400px;
+              /**/ } }
+          @media only screen and (max-width: 1000px) {
+            .experienceContainer .experienceCentering ul li .experienceContent {
+              /*laptop and tablet*/
+              height: 100%;
+              /**/
+              flex-direction: column-reverse;
+              /**/
+              justify-content: center;
+              /***/ } }
+          .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo {
+            width: calc(100% - 310px);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; }
+            @media only screen and (min-width: 1600px) {
+              .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo {
+                /*big screen*/
+                width: calc(100% - 410px);
+                /**/ } }
+            @media only screen and (max-width: 1000px) {
+              .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo {
+                /*laptop and tablet*/
+                height: 55%;
+                /**/
+                width: 100%;
+                /**/
+                margin-top: 10px;
+                /**/ } }
+            .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection {
+              /*the data section & visit btn section*/ }
+              .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .experienceInfoContent h2 {
+                margin: 0px;
+                /*auto-setted*/
+                font-family: "AlteHaasGroteskBold";
+                font-size: 25px;
+                color: #fff;
+                line-height: 17px;
+                text-decoration: none; }
+                @media only screen and (min-width: 1600px) {
+                  .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .experienceInfoContent h2 {
+                    /*big screen*/
+                    font-family: "AlteHaasGroteskBold";
+                    font-size: 34px;
+                    color: #fff;
+                    line-height: 27px;
+                    text-decoration: none; } }
+                @media only screen and (max-width: 1000px) {
+                  .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .experienceInfoContent h2 {
+                    /*laptop and tablet*/
+                    font-family: "AlteHaasGroteskBold";
+                    font-size: 22px;
+                    color: #fff;
+                    line-height: 13px;
+                    text-decoration: none;
+                    /**/ } }
+              .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .experienceInfoContent p {
+                margin: 10px 0px;
+                font-family: "AlteHaasGroteskRegular";
+                font-size: 18px;
+                color: #fff;
+                line-height: initial;
+                text-decoration: none; }
+                @media only screen and (min-width: 1600px) {
+                  .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .experienceInfoContent p {
+                    font-family: "AlteHaasGroteskRegular";
+                    font-size: 20px;
+                    color: #fff;
+                    line-height: initial;
+                    text-decoration: none;
+                    /**/ } }
+                @media only screen and (max-width: 1000px) {
+                  .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .experienceInfoContent p {
+                    /*laptop and tablet*/
+                    font-family: "AlteHaasGroteskRegular";
+                    font-size: 15px;
+                    color: #fff;
+                    line-height: initial;
+                    text-decoration: none;
+                    /**/ } }
+              .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .roleContainer {
+                background: #aa00ff;
+                border-radius: 10px;
+                display: inline-block;
+                padding: 5px 12px;
+                margin: 3px; }
+                @media only screen and (max-width: 1000px) {
+                  .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .roleContainer {
+                    /*laptop and tablet*/
+                    margin: 2px;
+                    /**/
+                    padding: 3px 8px;
+                    /**/ } }
+                @media only screen and (max-width: 550px) {
+                  .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .roleContainer {
+                    /*mobile*/
+                    margin: 2px;
+                    /**/
+                    padding: 2px 6px;
+                    /**/ } }
+                .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .roleContainer label {
+                  margin: 0px;
+                  /*auto-setted*/
+                  font-family: "AlteHaasGroteskBold";
+                  font-size: 17px;
+                  color: #fff;
+                  line-height: 17px;
+                  text-decoration: none; }
+                  @media only screen and (min-width: 1600px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .roleContainer label {
+                      /*big screen*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 20px;
+                      color: #fff;
+                      line-height: 20px;
+                      text-decoration: none; } }
+                  @media only screen and (max-width: 1000px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .roleContainer label {
+                      /*laptop and tablet*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 18px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+                  @media only screen and (max-width: 550px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .roleContainer label {
+                      /*mobile*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 15px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+                .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .roleContainer h3 {
+                  margin: 2px 0px;
+                  font-family: "AlteHaasGroteskRegular";
+                  font-size: 13px;
+                  color: #fff;
+                  line-height: initial;
+                  text-decoration: none; }
+                  @media only screen and (min-width: 1600px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .roleContainer h3 {
+                      /*big screen*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 15px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+                  @media only screen and (max-width: 1000px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .roleContainer h3 {
+                      /*laptop and tablet*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 12px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+                  @media only screen and (max-width: 550px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .roleContainer h3 {
+                      /*mobile*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 10px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+              .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .fromContainer {
+                background: #aa00ff;
+                border-radius: 10px;
+                display: inline-block;
+                padding: 5px 12px;
+                margin: 3px; }
+                @media only screen and (max-width: 1000px) {
+                  .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .fromContainer {
+                    /*laptop and tablet*/
+                    margin: 2px;
+                    /**/
+                    padding: 3px 8px;
+                    /**/ } }
+                @media only screen and (max-width: 550px) {
+                  .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .fromContainer {
+                    /*mobile*/
+                    margin: 2px;
+                    /**/
+                    padding: 2px 6px;
+                    /**/ } }
+                .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .fromContainer label {
+                  margin: 0px;
+                  /*auto-setted*/
+                  font-family: "AlteHaasGroteskBold";
+                  font-size: 17px;
+                  color: #fff;
+                  line-height: 17px;
+                  text-decoration: none; }
+                  @media only screen and (min-width: 1600px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .fromContainer label {
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 20px;
+                      color: #fff;
+                      line-height: 20px;
+                      text-decoration: none; } }
+                  @media only screen and (max-width: 1000px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .fromContainer label {
+                      /*laptop and tablet*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 18px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+                  @media only screen and (max-width: 550px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .fromContainer label {
+                      /*mobile*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 15px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+                .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .fromContainer h3 {
+                  margin: 2px 0px;
+                  font-family: "AlteHaasGroteskRegular";
+                  font-size: 13px;
+                  color: #fff;
+                  line-height: initial;
+                  text-decoration: none; }
+                  @media only screen and (min-width: 1600px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .fromContainer h3 {
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 15px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+                  @media only screen and (max-width: 1000px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .fromContainer h3 {
+                      /*laptop and tablet*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 12px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+                  @media only screen and (max-width: 550px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .fromContainer h3 {
+                      /*mobile*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 10px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+              .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .toContainer {
+                background: #aa00ff;
+                border-radius: 10px;
+                display: inline-block;
+                padding: 5px 12px;
+                margin: 3px; }
+                @media only screen and (max-width: 1000px) {
+                  .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .toContainer {
+                    /*laptop and tablet*/
+                    margin: 2px;
+                    /**/
+                    padding: 3px 8px;
+                    /**/ } }
+                @media only screen and (max-width: 550px) {
+                  .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .toContainer {
+                    /*mobile*/
+                    margin: 2px;
+                    /**/
+                    padding: 2px 6px;
+                    /**/ } }
+                .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .toContainer label {
+                  margin: 0px;
+                  /*auto-setted*/
+                  font-family: "AlteHaasGroteskBold";
+                  font-size: 17px;
+                  color: #fff;
+                  line-height: 17px;
+                  text-decoration: none; }
+                  @media only screen and (min-width: 1600px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .toContainer label {
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 20px;
+                      color: #fff;
+                      line-height: 20px;
+                      text-decoration: none; } }
+                  @media only screen and (max-width: 1000px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .toContainer label {
+                      /*laptop and tablet*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 18px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+                  @media only screen and (max-width: 550px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .toContainer label {
+                      /*mobile*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 15px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+                .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .toContainer h3 {
+                  margin: 2px 0px;
+                  font-family: "AlteHaasGroteskRegular";
+                  font-size: 13px;
+                  color: #fff;
+                  line-height: initial;
+                  text-decoration: none; }
+                  @media only screen and (min-width: 1600px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .toContainer h3 {
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 15px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+                  @media only screen and (max-width: 1000px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .toContainer h3 {
+                      /*laptop and tablet*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 12px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+                  @media only screen and (max-width: 550px) {
+                    .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .toContainer h3 {
+                      /*mobile*/
+                      font-family: "AlteHaasGroteskBold";
+                      font-size: 10px;
+                      color: #fff;
+                      line-height: initial;
+                      text-decoration: none; } }
+              .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .experienceLinkContainer {
+                display: flex;
+                justify-content: flex-start; }
+                @media only screen and (max-width: 1000px) {
+                  .experienceContainer .experienceCentering ul li .experienceContent .experienceInfo .experienceInfoSection .experienceLinkContainer {
+                    justify-content: center; } }
+          .experienceContainer .experienceCentering ul li .experienceContent .experienceImage {
+            height: 300px;
+            width: 300px;
+            border-radius: 10px;
+            margin-left: 10px;
+            background: linear-gradient(to right, #b000ff, #7f00ff);
+            /**/
+            display: flex;
+            /**/
+            align-items: center;
+            /**/
+            justify-content: center;
+            /**/
+            transition: all 0.3s;
+            /**/ }
+            .experienceContainer .experienceCentering ul li .experienceContent .experienceImage img {
+              /**/
+              width: 65%;
+              /**/
+              height: auto;
+              /**/
+              transition: all 0.3s;
+              /**/ }
+            @media only screen and (min-width: 1600px) {
+              .experienceContainer .experienceCentering ul li .experienceContent .experienceImage {
+                height: 400px;
+                width: 400px; } }
+            @media only screen and (max-width: 1000px) {
+              .experienceContainer .experienceCentering ul li .experienceContent .experienceImage {
+                width: 100%;
+                /**/
+                height: 35%;
+                /**/
+                background-image: url("../images/previews/fitnessGymPreviewSmall.png");
+                background-size: cover;
+                background-position: top;
+                /**/
+                margin-left: 0px;
+                /**/
+                margin-bottom: 10px;
+                /**/
+                background: linear-gradient(to right, #7f00ff, #e100ff); } }
+
+/*# sourceMappingURL=experienceContainer.css.map */

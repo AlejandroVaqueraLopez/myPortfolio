@@ -1,0 +1,97 @@
+@import "vars";
+@import "functions";
+
+/*from 0px -> 550px mobile*/
+/*from 551px -> 1000px tablet or mini-laptop*/
+/*from 1001px -> 1599px is normal size*/
+/*from 1600px -> ~px big-screen*/
+
+.scholarshipContainer{
+	width:70%;
+	height:500px;
+	overflow:hidden;
+	opacity:0;
+	transition:opacity ease-in-out 0.7s;
+	top:700vh;
+	position:absolute;
+	left:calc((100vw / 2) - 35%);
+	z-index:2;
+	//outline:solid white;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	@media only screen and (max-width:550px){
+		width:90%;
+		left:calc((100vw / 2) - 45%);
+	}
+	.centeringContainer{
+		height:300px;
+		width:100%;
+		max-width:1250px;
+		//background:indianred;
+		position:relative;
+		display:flex;
+		align-items:center;
+		@media only screen and (max-width:1000px){
+			height:500px;
+		}
+
+		ul{
+			height:auto;
+			width:100%;
+			//outline:solid purple;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			flex-wrap:wrap;
+
+			li{ 
+				height:180px;
+				width:180px;
+				//outline:solid orange;
+				list-style:none;
+				display:flex;
+				align-items:center;
+				justify-content:center;
+				margin:15px;
+				@media only screen and (min-width:1600px){
+					height:220px;
+					width:220px;
+				}
+				@media only screen and (max-width:1000px){
+					height:140px;
+					width:140px;
+					margin:10px;
+				}
+				@media only screen and (max-width:550px){
+					height:100px;
+					width:100%;
+					margin:8px 0px;
+				}
+				.scholarshipImageContainer{
+					height:100%;
+					width:100%;
+					//outline:solid black;
+					display:flex;
+					align-items:center;
+					justify-content:center;
+					background-color:rgba(255,255,255,0.2);/*for backdrop*/
+					backdrop-filter:blur(8px);/*not working on firefox*/
+					border-radius:10px;/*for backdrop*/
+					box-sizing:border-box;/*for backdrop*/
+					transition: all 0.3s;
+					img{
+						height:auto;
+						width:80%;
+						transition: all 0.3s;
+						@media only screen and (max-width:550px){
+							width:50%;
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
+

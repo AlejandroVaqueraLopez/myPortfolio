@@ -1,0 +1,16 @@
+@font-face{
+	font-family: "AlteHaasGroteskBold";
+	src: url("../fonts/AlteHaasGroteskBold.ttf");
+	font-weight:bold;
+}
+@font-face{
+	font-family: "AlteHaasGroteskRegular";
+	src: url("../fonts/AlteHaasGroteskRegular.ttf");
+}
+
+//fonts
+$boldFont: "AlteHaasGroteskBold";
+$regularFont: "AlteHaasGroteskRegular";
+
+//backgrounds
+$purpleBackground: #aa00ff;

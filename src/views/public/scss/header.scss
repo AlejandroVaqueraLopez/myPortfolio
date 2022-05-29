@@ -1,0 +1,125 @@
+/*imports*/
+@import "vars";
+@import "functions";
+
+header{
+	height:auto;
+	width:115px;
+	position:fixed;
+	right:0px;
+	top:calc(100vh / 2 - 28vh);
+	z-index:3;
+	//outline:solid red;
+
+	display:flex;/**/
+	justify-content:space-between;/**/
+
+	//circle indicator to the current linked in header menu
+	.menuIndicator{
+		height:8px;
+		width:8px;
+		border-radius:50%;
+		background:#fff;
+
+		transform:translateY(calc(5vh + 3px));//preset
+		transition:transform 0.5s;
+		
+		@media only screen and (max-width:1000px){
+			display:none;
+		}
+	}
+
+	nav{
+		//outline:solid orange;
+		width:100px;
+		.menuIconContainer{
+			display:none;
+		}
+		@media only screen and (max-width:1000px){
+			width:100%;
+			.menuIconContainer{
+				height:55px;
+				width:100%;
+				//outline:solid orange;
+				display:flex;
+				justify-content:flex-end;
+				background-color: linear-gradient(to right, #7f00ff, #e100ff);/*for not compatible backdrop*/
+				background-color:rgba(255,255,255,0.2);/*for backdrop*/
+				backdrop-filter:blur(8px);/*not working on firefox*/
+
+				.menuIcon{
+					height:55px;
+					width:55px;
+					//outline:solid purple;
+					display:flex;
+					flex-direction:column;
+					align-items:center;
+					justify-content:center;
+					&:hover{
+						cursor:pointer;
+					}
+					span{
+						height:6px;
+						width:40px;
+						background:#fff;
+						border-radius:5px;
+						margin:4px;
+						transition:all 0.5s;
+					}
+					.menuBarTop{
+
+					}
+				}
+			}
+
+		}
+
+		ul {
+			overflow:hidden;
+			li{
+				margin:5vh 0px;
+				display:flex;
+				align-items:center;
+				//outline:solid red;
+				a{
+					text-decoration:none;
+					h5{
+						font-size:13px;
+
+						line-height:14px;/**/
+
+						font-family:$regularFont;
+						color:#fff;
+					}
+				}
+				@media only screen and (max-width:1000px){
+					padding:18px 0px;
+					width:100%;
+					height:20px;
+					margin:0px;
+					justify-content:center;
+
+					transform:translateX(100vw);
+					transition:all 0.2s;
+					background-color: linear-gradient(to right, #7f00ff, #e100ff);/*for not compatible backdrop*/
+					background-color:rgba(255,255,255,0.2);/*for backdrop*/
+					backdrop-filter:blur(8px);/*not working on firefox*/
+				}
+			}
+			@media only screen and (max-width:1000px){
+				display:flex;
+				flex-direction:column;
+				align-items:center;
+				display:none;
+			}
+		}
+	}
+	@media only screen and (max-width:1000px){
+		left:0px;
+		top:0px;
+		height:auto;
+		width:auto;
+	}
+
+}
+

@@ -1,0 +1,102 @@
+@import 'vars';
+@import 'functions';
+
+/*from 0px -> 550px mobile*/
+/*from 551px -> 1000px tablet or mini-laptop*/
+/*from 1001px -> 1599px is normal size*/
+/*from 1600px -> ~px big-screen*/
+
+.profileContainer{
+	height:500px;
+	position:absolute;
+	top:105vh;
+	display:flex;
+	align-items:flex-start;
+	justify-content:center;
+	//outline:solid white;
+	width:60%;
+	height:500px;
+	position:absolute;
+	z-index:2;
+	transition:opacity ease-in-out 0.7s;
+	left:calc((100vw / 2) - 30%);
+	opacity:0;
+	@media only screen and (max-width:1000px){
+		width:80%;/**/
+		left:calc((100vw / 2) - 40%);/**/
+	}
+	@media only screen and (max-width:550px){
+		width:90%;/**/
+		left:calc((100vw / 2) - 45%);/**/
+	}
+	.profileContent{
+		width:auto;
+		height:100%;
+		max-width:600px;
+		//outline:solid purple;
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		justify-content:center;
+		.profileInfo{
+			@include setText($regularFont,18px,#fff,18px,none);/**/
+			text-align:justify;
+			b{
+				@include setText($boldFont,18px,#fff,18px,none);/**/
+			}
+		}
+		@media only screen and (min-width:1600px){
+			.profileInfo{
+				@include setText($regularFont,22px,#fff,22px,none);/**/
+				b{
+					@include setText($boldFont,22px,#fff,22px,none);/**/
+				}
+			}
+		}
+		@media only screen and (max-width:550px){
+			.profileInfo{
+				@include setText($regularFont,15px,#fff,18px,none);/**/
+				b{
+					@include setText($boldFont,15px,#fff,18px,none);/**/
+				}
+			}
+		}
+		.profileImageContainer{
+			height:255px;
+			width:255px;
+			border-radius:50%;
+			margin-top:30px;
+			display:flex;
+			align-items:flex-end;
+			justify-content:center;
+			//outline:solid purple;
+			transition:all 0.3s;
+			background: linear-gradient(to right, #ff0054, #ff9605);/**/
+			img{
+				height:250px;
+				width:220px;
+				transition:all 0.3s;
+				margin-bottom:-4px;
+			}
+			@media only screen and (min-width:1600px){
+				height:275px;
+				width:275px;
+				img{
+					height:270px;
+					width:240px;
+				}
+			}
+			@media only screen and (max-width:550px){
+				height:235px;
+				width:235px;
+				img{
+					height:230px;
+					width:200px;
+				}
+			}
+		}
+
+	}
+
+}
+

@@ -1,0 +1,26 @@
+@import "functions";
+@import "vars";
+//author is the first view of the app
+.authorContainer{
+	position:absolute;
+	top:calc(100vh / 2);
+	left:calc((100vw / 2) - 180px);
+	z-index:2;
+	user-select:none;
+	color:#fff;
+	h1{
+		@include setText($boldFont,32px,#fff,initial,none);/**/
+		@media only screen and (max-width:550px){/*mobile*/
+			@include setText($boldFont,23px,#fff,initial,none);/**/
+		}
+	}
+	h2{
+		@include setText($regularFont,12px,#fff,initial,none);/**/
+		@media only screen and (max-width:550px){/*mobile*/
+			@include setText($regularFont,13px,#fff,initial,none);/**/
+		}
+	}
+	@media only screen and (max-width:550px){/*mobile*/
+		left:calc((100vw / 2) - 130px);
+	}
+}

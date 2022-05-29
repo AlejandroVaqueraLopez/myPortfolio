@@ -1,0 +1,106 @@
+/*imports*/
+@font-face {
+  font-family: "AlteHaasGroteskBold";
+  src: url("../fonts/AlteHaasGroteskBold.ttf");
+  font-weight: bold; }
+@font-face {
+  font-family: "AlteHaasGroteskRegular";
+  src: url("../fonts/AlteHaasGroteskRegular.ttf"); }
+header {
+  height: auto;
+  width: 115px;
+  position: fixed;
+  right: 0px;
+  top: calc(100vh / 2 - 28vh);
+  z-index: 3;
+  display: flex;
+  /**/
+  justify-content: space-between;
+  /**/ }
+  header .menuIndicator {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: #fff;
+    transform: translateY(calc(5vh + 3px));
+    transition: transform 0.5s; }
+    @media only screen and (max-width: 1000px) {
+      header .menuIndicator {
+        display: none; } }
+  header nav {
+    width: 100px; }
+    header nav .menuIconContainer {
+      display: none; }
+    @media only screen and (max-width: 1000px) {
+      header nav {
+        width: 100%; }
+        header nav .menuIconContainer {
+          height: 55px;
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          background-color: linear-gradient(to right, #7f00ff, #e100ff);
+          /*for not compatible backdrop*/
+          background-color: rgba(255, 255, 255, 0.2);
+          /*for backdrop*/
+          backdrop-filter: blur(8px);
+          /*not working on firefox*/ }
+          header nav .menuIconContainer .menuIcon {
+            height: 55px;
+            width: 55px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; }
+            header nav .menuIconContainer .menuIcon:hover {
+              cursor: pointer; }
+            header nav .menuIconContainer .menuIcon span {
+              height: 6px;
+              width: 40px;
+              background: #fff;
+              border-radius: 5px;
+              margin: 4px;
+              transition: all 0.5s; } }
+    header nav ul {
+      overflow: hidden; }
+      header nav ul li {
+        margin: 5vh 0px;
+        display: flex;
+        align-items: center; }
+        header nav ul li a {
+          text-decoration: none; }
+          header nav ul li a h5 {
+            font-size: 13px;
+            line-height: 14px;
+            /**/
+            font-family: "AlteHaasGroteskRegular";
+            color: #fff; }
+        @media only screen and (max-width: 1000px) {
+          header nav ul li {
+            padding: 18px 0px;
+            width: 100%;
+            height: 20px;
+            margin: 0px;
+            justify-content: center;
+            transform: translateX(100vw);
+            transition: all 0.2s;
+            background-color: linear-gradient(to right, #7f00ff, #e100ff);
+            /*for not compatible backdrop*/
+            background-color: rgba(255, 255, 255, 0.2);
+            /*for backdrop*/
+            backdrop-filter: blur(8px);
+            /*not working on firefox*/ } }
+      @media only screen and (max-width: 1000px) {
+        header nav ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          display: none; } }
+  @media only screen and (max-width: 1000px) {
+    header {
+      left: 0px;
+      top: 0px;
+      height: auto;
+      width: auto; } }
+
+/*# sourceMappingURL=header.css.map */

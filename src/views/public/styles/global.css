@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "AlteHaasGroteskBold";
+  src: url("../fonts/AlteHaasGroteskBold.ttf");
+  font-weight: bold; }
+@font-face {
+  font-family: "AlteHaasGroteskRegular";
+  src: url("../fonts/AlteHaasGroteskRegular.ttf"); }
+* {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth; }
+
+body {
+  background-color: #000; }
+
+.btnMain {
+  height: auto;
+  min-height: 40px;
+  padding: 3px 3px;
+  width: auto;
+  min-width: 150px;
+  border: none;
+  background: #aa00ff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "AlteHaasGroteskBold";
+  font-size: 20px;
+  color: #fff;
+  line-height: initial;
+  text-decoration: none; }
+  .btnMain:hover {
+    cursor: pointer; }
+  @media only screen and (min-width: 1600px) {
+    .btnMain {
+      font-family: "AlteHaasGroteskBold";
+      font-size: 22px;
+      color: #fff;
+      line-height: initial;
+      text-decoration: none; } }
+  @media only screen and (max-width: 1000px) {
+    .btnMain {
+      /*laptop and tablet*/
+      width: auto;
+      min-width: 95px;
+      height: auto;
+      min-height: 30px;
+      padding: 2px 2px;
+      font-family: "AlteHaasGroteskBold";
+      font-size: 18px;
+      color: #fff;
+      line-height: initial;
+      text-decoration: none; } }
+
+/*# sourceMappingURL=global.css.map */

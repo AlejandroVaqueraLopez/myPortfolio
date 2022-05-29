@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PORTFOLIO - ALEJANDRO VAQUERA</title>
+	<link rel="stylesheet" href="./public/styles/global.css">
+	<link rel="stylesheet" href="./public/styles/particles.css">
+	<link rel="stylesheet" href="./public/styles/header.css">
+	<link rel="stylesheet" href="./public/styles/animations.css">
+	<link rel="stylesheet" href="./public/styles/index.css">
+
+	<!--component styles-->
+	<link rel="stylesheet" href="./public/styles/authorContainer.css">
+	<link rel="stylesheet" href="./public/styles/suggestContainer.css">
+	<link rel="stylesheet" href="./public/styles/profileContainer.css">
+	<link rel="stylesheet" href="./public/styles/proyectsContainer.css">
+	<link rel="stylesheet" href="./public/styles/experienceContainer.css">
+	<link rel="stylesheet" href="./public/styles/scholarshipContainer.css">
+	<link rel="stylesheet" href="./public/styles/awardsContainer.css">
+	<link rel="stylesheet" href="./public/styles/contactContainer.css">
+</head>
+<body>
+
+		<!--header component-->
+		<%- include("./components/header.ejs") %>
+
+		<!-- particles.js container -->
+		<div class="particles-container" id="particles-js"></div>
+
+		<!--author component-->
+		<%- include("./components/authorContainer.ejs") %>
+
+		<!--suggest component-->
+		<%- include("./components/suggestContainer.ejs") %>
+
+		<!--profile component-->
+		<%- include("./components/profileContainer.ejs") %>
+
+		<!--proyects component-->
+		<%- include("./components/proyectsContainer.ejs") %>
+
+		<!--experience component-->
+		<%- include("./components/experienceContainer.ejs") %>
+
+		<!--scholarship component-->
+		<%- include("./components/scholarshipContainer.ejs") %>
+
+		<!--awards component-->
+		<%- include("./components/awardsContainer.ejs") %>
+
+		<!--contact component-->
+		<%- include("./components/contactContainer.ejs") %>
+
+		<!--footer component-->
+		<%- include("./components/footer.ejs") %>
+
+		<!--from this module, all the scripts are connected-->
+		<script src="./public/js/particles.js"></script>
+		<script src="./public/js/app.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+		<script type="module" src="./public/js/mainModule.js"></script>
+</body>
+</html>

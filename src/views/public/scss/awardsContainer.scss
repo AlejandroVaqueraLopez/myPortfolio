@@ -1,0 +1,332 @@
+@import "vars";
+@import "functions";
+
+/*from 0px -> 550px mobile*/
+/*from 551px -> 1000px tablet or mini-laptop*/
+/*from 1001px -> 1599px is normal size*/
+/*from 1600px -> ~px big-screen*/
+
+.awardsContainer{
+	width:70%;
+	height:500px;
+	position:absolute;
+	z-index:2;
+	top:900vh;
+	transition:opacity ease-in-out 0.7s;
+	left:calc((100vw / 2) - 35%);
+	//outline:solid white;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	opacity:0;
+	overflow:hidden;
+	background-color:rgba(255,255,255,0.2);/*for backdrop*/
+	backdrop-filter:blur(8px);/*not working on firefox*/
+	border-radius:10px;/*for backdrop*/
+	padding-left:20px;/*for backdrop*/
+	box-sizing:border-box;/*for backdrop*/
+
+	@media only screen and (max-width:550px){
+		width:90%;/**/
+		left:calc((100vw / 2) - 45%);/**/
+	}
+
+	.awardsCentering{/*this sets a max-width size*/
+		height:500px;
+		max-width:1250px;
+	//	background:indianred;
+		position:relative;
+
+		.controlsContainer{
+			position:absolute;
+			right:0px;
+			top:0px;
+			height:100%;
+			width:10%;
+			//outline:solid white;
+			z-index:2;
+			display:flex;
+			flex-direction:column;
+			align-items:center;
+			justify-content:center;
+			.upArrow,.downArrow{
+				width:60%;
+				height:50px;
+				background:none;
+				border:none;
+				opacity:0.5;
+				@include setBackground("../icons/arrow-icon.png",cover,center);
+				transition:all 0.5s;
+				margin:5px 0px;
+				&:hover{
+					cursor:pointer;
+				}
+			}
+			.upArrow{
+				transform:rotate(180deg);
+				&:hover{
+					opacity:1;
+				}
+			}
+			.downArrow{
+				&:hover{
+					opacity:1;
+				}
+			}
+		}
+
+		ul{
+			//outline:solid blue;
+			height:auto;
+			width:90%;
+			margin:0px;/*auto-setted*/
+			padding:0px;/*auto-setted*/
+			li{
+				width:100%;
+				height:500px;
+				//outline:solid orange;
+				display:flex;
+				align-items:center;
+				justify-content:flex-start;
+				@media only screen and (max-width:1000px){/*laptop and tablet*/
+					align-items:flex-start;/**/
+					justify-content:center;/**/
+				}
+				.awardsContent{
+					height:300px;
+					width:100%;
+					//outline:solid black;
+					display:flex;
+					align-items:flex-start;
+					@media only screen and (min-width:1600px){/*big screen*/
+						height:400px;/**/
+					}
+					@media only screen and (max-width:1000px){/*laptop and tablet*/
+						height:100%;/**/
+						flex-direction:column-reverse;/**/
+						justify-content:center;/***/
+					}
+					.awardsInfo{
+						width:calc(100% - 310px);
+						height:100%;
+						display:flex;
+						flex-direction:column;
+						justify-content:space-between;
+						//outline:solid orange;
+						@media only screen and (min-width:1600px){/*big screen*/
+							width:calc(100% - 410px);/**/
+						}
+						@media only screen and (max-width:1000px){/*laptop and tablet*/
+							height:55%;/**/
+							width:100%;/**/
+							margin-top:10px;/**/
+						}
+
+						.awardsInfoSection{/*the data section & visit btn section*/
+							//outline:solid purple;
+
+								.awardsInfoContent{
+									//outline:solid red;
+									h2{
+										margin:0px;/*auto-setted*/
+										@include setText($boldFont,25px,#fff,17px,none);
+										@media only screen and (min-width:1600px){/*big screen*/
+											@include setText($boldFont,34px,#fff,27px,none);
+										}
+										@media only screen and (max-width:1000px){/*laptop and tablet*/
+											@include setText($boldFont,22px,#fff,13px,none);/**/
+										}
+									}
+									p{
+										margin:10px 0px;
+										@include setText($regularFont,18px,#fff,initial,none);
+										@media only screen and (min-width:1600px){
+											@include setText($regularFont,20px,#fff,initial,none);/**/
+										}
+										@media only screen and (max-width:1000px){/*laptop and tablet*/
+											@include setText($regularFont,15px,#fff,initial,none);/**/
+										}
+									}
+								}
+
+								.placeContainer{
+									background:$purpleBackground;
+									border-radius:10px;
+									display:inline-block;
+									padding:5px 12px;
+									margin:3px;
+									@media only screen and (max-width:1000px){/*laptop and tablet*/
+										margin:2px;/**/
+										padding:3px 8px;/**/
+									}
+									@media only screen and (max-width:550px){/*mobile*/
+										margin:2px;/**/
+										padding:2px 6px;/**/
+									}
+									label{
+										margin:0px;/*auto-setted*/
+										@include setText($boldFont,17px,#fff,17px,none);
+										@media only screen and (min-width:1600px){/*big screen*/
+											@include setText($boldFont,20px,#fff,20px,none);
+										}
+										@media only screen and (max-width:1000px){/*laptop and tablet*/
+											@include setText($boldFont,18px,#fff,initial,none);
+										}
+										@media only screen and (max-width:550px){/*mobile*/
+											@include setText($boldFont,15px,#fff,initial,none);
+										}
+									}
+									h3{
+										margin:2px 0px;
+										@include setText($regularFont,13px,#fff,initial,none);
+										@media only screen and (min-width:1600px){/*big screen*/
+											@include setText($boldFont,15px,#fff,initial,none);
+										}
+										@media only screen and (max-width:1000px){/*laptop and tablet*/
+											@include setText($boldFont,12px,#fff,initial,none);
+										}
+										@media only screen and (max-width:550px){/*mobile*/
+											@include setText($boldFont,10px,#fff,initial,none);
+										}
+									}
+								}
+								.fromContainer{
+									background:$purpleBackground;
+									border-radius:10px;
+									display:inline-block;
+									padding:5px 12px;
+									margin:3px;
+									@media only screen and (max-width:1000px){/*laptop and tablet*/
+										margin:2px;/**/
+										padding:3px 8px;/**/
+									}
+									@media only screen and (max-width:550px){/*mobile*/
+										margin:2px;/**/
+										padding:2px 6px;/**/
+									}
+									label{
+										margin:0px;/*auto-setted*/
+										@include setText($boldFont,17px,#fff,17px,none);
+										@media only screen and (min-width:1600px){
+											@include setText($boldFont,20px,#fff,20px,none);
+										}
+										@media only screen and (max-width:1000px){/*laptop and tablet*/
+											@include setText($boldFont,18px,#fff,initial,none);
+										}
+										@media only screen and (max-width:550px){/*mobile*/
+											@include setText($boldFont,15px,#fff,initial,none);
+										}
+									}
+									h3{
+										margin:2px 0px;
+										@include setText($regularFont,13px,#fff,initial,none);
+										@media only screen and (min-width:1600px){
+											@include setText($boldFont,15px,#fff,initial,none);
+										}
+										@media only screen and (max-width:1000px){/*laptop and tablet*/
+											@include setText($boldFont,12px,#fff,initial,none);
+										}
+										@media only screen and (max-width:550px){/*mobile*/
+											@include setText($boldFont,10px,#fff,initial,none);
+										}
+									}
+
+								}
+								.toContainer{
+									background:$purpleBackground;
+									border-radius:10px;
+									display:inline-block;
+									padding:5px 12px;
+									margin:3px;
+									@media only screen and (max-width:1000px){/*laptop and tablet*/
+										margin:2px;/**/
+										padding:3px 8px;/**/
+									}
+									@media only screen and (max-width:550px){/*mobile*/
+										margin:2px;/**/
+										padding:2px 6px;/**/
+									}
+									label{
+										margin:0px;/*auto-setted*/
+										@include setText($boldFont,17px,#fff,17px,none);
+										@media only screen and (min-width:1600px){
+											@include setText($boldFont,20px,#fff,20px,none);
+										}
+										@media only screen and (max-width:1000px){/*laptop and tablet*/
+											@include setText($boldFont,18px,#fff,initial,none);
+										}
+										@media only screen and (max-width:550px){/*mobile*/
+											@include setText($boldFont,15px,#fff,initial,none);
+										}
+									}
+									h3{
+										margin:2px 0px;
+										@include setText($regularFont,13px,#fff,initial,none);
+										@media only screen and (min-width:1600px){
+											@include setText($boldFont,15px,#fff,initial,none);
+										}
+										@media only screen and (max-width:1000px){/*laptop and tablet*/
+											@include setText($boldFont,12px,#fff,initial,none);
+										}
+										@media only screen and (max-width:550px){/*mobile*/
+											@include setText($boldFont,10px,#fff,initial,none);
+										}
+									}
+
+								}
+								.awardsLinkContainer{
+									display:flex;
+									justify-content:flex-start;
+									//outline:dashed yellow;
+									@media only screen and (max-width:1000px){
+										justify-content:center;
+									}
+									.awardsLink{
+										//btnMain class globally added
+									}
+								}
+
+							}
+
+						}
+
+					.awardsImage{
+						height:300px;
+						width:300px;
+						border-radius:10px;
+						margin-left:10px;
+
+						background: linear-gradient(to right,#b000ff,#7f00ff);/**/
+						display:flex;/**/
+						align-items:center;/**/
+						justify-content:center;/**/
+						transition:all 0.3s;/**/
+						img{/**/
+							width:65%;/**/
+							height:auto;/**/
+							transition:all 0.3s;/**/
+						}
+						@media only screen and (min-width:1600px){
+							height:400px;
+							width:400px;
+						}
+						@media only screen and (max-width:1000px){
+							width:100%;/**/
+							height:35%;/**/
+							@include setBackground("../images/previews/fitnessGymPreviewSmall.png",cover,top);/**/
+							margin-left:0px;/**/
+							margin-bottom:10px;/**/
+							background: linear-gradient(to right, #7f00ff, #e100ff);
+						}
+
+					}
+
+				}
+			}
+		}
+
+	}
+
+}
+
