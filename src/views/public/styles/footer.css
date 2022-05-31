@@ -1,3 +1,16 @@
-
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  /*for backdrop*/
+  backdrop-filter: blur(8px);
+  /*not working on firefox*/
+  position: absolute;
+  top: calc(2500vh - 200px);
+  z-index: 2; }
+  @media only screen and (max-width: 1000px) {
+    footer {
+      height: 100px;
+      top: calc(1500vh - 100px); } }
 
 /*# sourceMappingURL=footer.css.map */

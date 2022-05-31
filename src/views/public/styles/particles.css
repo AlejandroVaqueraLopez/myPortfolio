@@ -33,3 +33,12 @@ canvas{
 	position:absolute;
 	z-index:1;
 }
+
+@media only screen and (max-width:1000px){
+  #particles-js{
+    height: 1500vh;
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(#f64f59, #fc00ff,#aa00ff, #12c2e9,#c471ed);  
+    background: linear-gradient(#f64f59, #fc00ff,#aa00ff, #12c2e9,#c471ed); 
+  }
+}

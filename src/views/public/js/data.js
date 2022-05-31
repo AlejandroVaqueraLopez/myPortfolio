@@ -24,6 +24,41 @@ let proyectsListData = [
   },
 
   {
+    image:"./public/images/previews/gamespotPreviewSmall.png",
+    name:"GameSpot",
+    info:"Game finder by title, creation year, classification and more, choose from more than 150 games and see their most important data.",
+    techList:[
+      {
+        name:"Sass",
+        icon:"./public/icons/sass-icon.png"
+      },
+      {
+        name:"Nodejs",
+        icon:"./public/icons/nodejs-icon.png"
+      },
+      {
+        name:"Express.js",
+        icon:"./public/icons/expressjs-icon.png"
+      },
+      {
+        name:"Ejs",
+        icon:"./public/icons/ejs-icon.png"
+      },
+      {
+        name:"CSS",
+        icon:"./public/icons/css-icon.png"
+      },
+      {
+        name:"SweetAlert.js",
+        icon:"./public/icons/sweetalert-icon.png"
+      },
+    ],
+    release:"2021",
+    link: "https://gamespot.unexlink.co",
+    repository:"https://github.com/AlejandroVaqueraLopez/gameSpot"
+  },
+
+  {
     image:"./public/images/previews/netflixPreviewSmall.png",
     name:"Netflix Clone",
     info:"The Log-in and Main pages of Netflix cloned, I also used a web server to use some modules, responsive design and carousel of movie previews.",
@@ -77,40 +112,6 @@ let proyectsListData = [
     repository:"https://github.com/AlejandroVaqueraLopez/clonNetflixBootstrap"
   },
 
-  {
-    image:"./public/images/previews/rickandmortyPreviewSmall.png",
-    name:"Rick and morty API",
-    info:"A web server environment page that contains a carousel with all of “Rick and Morty” characters, extracted from the (Rick and Morty API).",
-    techList:[
-      {
-        name:"Nodejs",
-        icon:"./public/icons/nodejs-icon.png"
-      },
-      {
-        name:"Express.js",
-        icon:"./public/icons/expressjs-icon.png"
-      },
-      {
-        name:"particles.js",
-        icon:"./public/icons/particlesjs-icon.png"
-      },
-      {
-        name:"CSS",
-        icon:"./public/icons/css-icon.png"
-      },
-      {
-        name:"HTML",
-        icon:"./public/icons/html-icon.png"
-      },
-      {
-        name:"Javascript",
-        icon:"./public/icons/js-icon.png"
-      }
-    ],
-    release:"2022",
-    link: "https://rickandmorty.unexlink.co",
-    repository:"https://github.com/AlejandroVaqueraLopez/rickAndMortyCarousel"
-  },
 
   {
     image:"./public/images/previews/bancajeroPreviewSmall.png",
@@ -153,6 +154,10 @@ let proyectsListData = [
         icon:"./public/icons/js-icon.png"
       },
       {
+        name:"Rellax.js",
+        icon:"./public/icons/rellaxjs-icon.png"
+      },
+      {
         name:"Express.js",
         icon:"./public/icons/expressjs-icon.png"
       },
@@ -187,6 +192,41 @@ let proyectsListData = [
   },
 
   {
+    image:"./public/images/previews/rickandmortyPreviewSmall.png",
+    name:"Rick and morty API",
+    info:"A web server environment page that contains a carousel with all of “Rick and Morty” characters, extracted from the (Rick and Morty API).",
+    techList:[
+      {
+        name:"Nodejs",
+        icon:"./public/icons/nodejs-icon.png"
+      },
+      {
+        name:"Express.js",
+        icon:"./public/icons/expressjs-icon.png"
+      },
+      {
+        name:"particles.js",
+        icon:"./public/icons/particlesjs-icon.png"
+      },
+      {
+        name:"CSS",
+        icon:"./public/icons/css-icon.png"
+      },
+      {
+        name:"HTML",
+        icon:"./public/icons/html-icon.png"
+      },
+      {
+        name:"Javascript",
+        icon:"./public/icons/js-icon.png"
+      }
+    ],
+    release:"2022",
+    link: "https://rickandmorty.unexlink.co",
+    repository:"https://github.com/AlejandroVaqueraLopez/rickAndMortyCarousel"
+  },
+
+  {
     image:"./public/images/previews/whoamiPreviewSmall.jpg",
     name:"Whoami app",
     info:"App that tells the user data about their own current navigator, is loadbalanced by traefik V2.0  (https://scrummer.co/tls) and (http://scrummer.co/notls) paths configured with nginx + Let's Encrypt, all was deployed with kubernetes.",
@@ -208,6 +248,7 @@ let proyectsListData = [
     link: "https://scrummer.co/tls",
     repository:"https://github.com/AlejandroVaqueraLopez/kubernetes-traefik-tls-notls-whoami"
   },
+
 
 
 ];
