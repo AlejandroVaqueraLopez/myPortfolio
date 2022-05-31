@@ -85,5 +85,8 @@ router.post("/send-email",(req,res)=>{
 		.catch(err => console.log(err.message));
 });
 
+router.use("*",(req,res)=>{
+	res.status(404).render(path.join(__dirname,"/views/pageNotFound.ejs"));
+});
 
 module.exports = router;
