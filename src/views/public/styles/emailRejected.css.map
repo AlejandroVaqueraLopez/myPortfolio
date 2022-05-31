@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,sCAAsC;AACtC,aAAa;EACX,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,IAAI;EAAG,+BAA+B;EAClD,UAAU,EAAE,IAAI;EAAG,gCAAgC;EACnD,UAAU,EAAE,IAAI;EAAE,sEAAsE",
+"sources": ["../scss/emailRejected.scss"],
+"names": [],
+"file": "emailRejected.css"
+}

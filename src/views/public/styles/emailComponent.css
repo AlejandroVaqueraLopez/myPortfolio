@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "AlteHaasGroteskBold";
+  src: url("../fonts/AlteHaasGroteskBold.ttf");
+  font-weight: bold; }
+@font-face {
+  font-family: "AlteHaasGroteskRegular";
+  src: url("../fonts/AlteHaasGroteskRegular.ttf"); }
+.successContainer {
+  height: 300px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: calc((100vh / 2) - 150px);
+  left: calc((100vw / 2) - 35%);
+  z-index: 2;
+  border-radius: 10px; }
+  @media only screen and (max-width: 550px) {
+    .successContainer {
+      width: 90%;
+      left: calc((100vw / 2) - 45%); } }
+  .successContainer .centeringSuccess {
+    max-width: 1000px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    /*for backdrop*/
+    backdrop-filter: blur(8px);
+    /*not working on firefox*/
+    box-sizing: border-box;
+    /*for backdrop*/ }
+    .successContainer .centeringSuccess .btnBackward {
+      height: 300px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      padding: 5px 10px;
+      box-sizing: border-box;
+      border-radius: 10px; }
+      .successContainer .centeringSuccess .btnBackward img {
+        height: 100px;
+        width: 100px;
+        margin: 10px; }
+        @media only screen and (min-width: 1600px) {
+          .successContainer .centeringSuccess .btnBackward img {
+            height: 120px;
+            width: 120px;
+            margin: 12px; } }
+      .successContainer .centeringSuccess .btnBackward h2 {
+        color: #fff;
+        margin: 10px;
+        text-decoration: underline;
+        font-family: "AlteHaasGroteskBold";
+        text-align: center; }
+        @media only screen and (max-width: 550px) {
+          .successContainer .centeringSuccess .btnBackward h2 {
+            font-size: 20px; } }
+        @media only screen and (min-width: 1600px) {
+          .successContainer .centeringSuccess .btnBackward h2 {
+            font-size: 24px; } }
+      .successContainer .centeringSuccess .btnBackward p {
+        color: #fff;
+        margin: 10px;
+        font-family: "AlteHaasGroteskRegular";
+        text-align: center; }
+        @media only screen and (max-width: 550px) {
+          .successContainer .centeringSuccess .btnBackward p {
+            font-size: 13px; } }
+        @media only screen and (min-width: 1600px) {
+          .successContainer .centeringSuccess .btnBackward p {
+            font-size: 20px; } }
+
+/*# sourceMappingURL=emailComponent.css.map */

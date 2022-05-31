@@ -1,0 +1,64 @@
+@import "vars";
+.colorSwitchComponent{
+	position:fixed;
+	height:40px;
+	width:85px;
+	//outline:solid blue; 
+	bottom:15px;
+	right:15px;
+	z-index:2;
+	border-radius:30px;
+	background-color:rgba(255,255,255,0.2);/*for backdrop*/
+	backdrop-filter:blur(8px);/*not working on firefox*/
+
+	.colorSwitchContainer{
+		height:100%;
+		width:100%;
+		//outline:solid white;
+		position:relative;
+		border-radius:30px;
+
+		.colorSwitchBackContainer{
+			position:absolute;
+			height:100%;
+			width:100%;
+			display:flex;
+			padding:0px 10px;
+			align-items:center;
+			justify-content:space-between;
+			box-sizing:border-box;
+			img{
+				width:35%;
+				height:55%;
+			}
+
+		}
+
+		.switchBallContainer{
+			position:relative;
+			height:100%;
+			width:100%;
+			//outline:solid purple;
+			box-sizing:border-box;
+			top:calc((100% / 2) - 50%);
+			left:calc((100% / 2) - 50%);
+			padding:0px 5px;
+			border-radius:30px;
+			&:hover{
+				cursor:pointer;
+			}
+
+			.switchBall{
+				position:absolute;
+				top:calc((100% / 2) - 17px);
+				height:34px;
+				width:34px;
+				background:$purpleBackground;
+				border-radius:50%;
+				transition:all 0.5s;
+			}
+
+		}
+
+	}
+}

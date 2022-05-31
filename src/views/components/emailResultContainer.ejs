@@ -1,0 +1,21 @@
+	<main class="successContainer">
+		<div class="centeringSuccess">
+
+			<a class="btnBackward" href="/">
+				<% if(value == "success") { %>
+						<img src="./public/icons/email-success-icon.png" alt="email success icon">
+						<p>Your mail was successfully sended, Alejandro will be in contact with you soon.</p>
+						<h2>Come back to main page</h2>
+				<% } else if(value == "rejected") { %>
+						<img src="./public/icons/email-rejected-icon.png" alt="email rejected icon">
+						<p>Oops, we are having troubles to send the email, please try again later.</p>
+						<h2>Come back to main page</h2>
+				<% } else if(value == "pageNotFound") { %>
+						<img src="./public/icons/page-not-found-icon.png" alt="page not found icon">
+						<p>Oops, page not found, better press the link below.</p>
+						<h2>Go to main page</h2>
+				<% } %>
+			</a>
+
+		</div>
+	</main>

@@ -30,4 +30,7 @@ import "./awardsCarousel.js";
 //this file may be edited in future versions of app
 import "./contact.js";
 
+//color toggle switch engine
+import "./colorSwitch.js";
+
 

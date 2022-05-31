@@ -77,11 +77,13 @@ function opacityAndParallaxFn(element,linkElement){
 }
 
 //parallax class variable
-var rellax = new Rellax('.rellax',{
-  speed:-5,
-})
+if(window.innerWidth >= 1000){//verifying if window-width is > than 1000 to apply parallax
+  var rellax = new Rellax('.rellax',{
+    speed:-5,
+  })
+}
 
-//this function is to scroll and center the element selected in header links
+//this function centers the scrolldown when click on link and IS PARALLAX
 const centerFormula = (element,top,scrolled) => {
   //set the element on top of viewport
   //top = //original element top position (top:300vh)
@@ -97,6 +99,18 @@ const centerFormula = (element,top,scrolled) => {
   return result;
 }
 
+//this function centers the scrolldown when click on link and IS NO PARALLAX
+const centerFormulaNoParallax = (element,top) => {
+  //top = //original element top position (top:300vh)
+  let result = top;
+
+  //1100
+  const halfScreen = ((window.innerHeight / 2));//half of viewport height
+  result = (top - halfScreen) + (element.clientHeight / 2);
+  return result;
+}
+
+
 //toggle of opacity when component is on view
 const containers = document.querySelectorAll(".container");
 const opacityFn = (className) => {
@@ -110,37 +124,57 @@ const opacityFn = (className) => {
 }
 
 //links of header listeners
+//HOME LINK/////////////////////////
 optHome.addEventListener("click",(e)=>{
   e.preventDefault();
+
+  //PARALLAX APPLYED (to go to home section is the same)
   window.scrollTo({
     top:0,
     behavior:"smooth"
   });
   //to close the menu (mobile and laptop)
   if(window.innerWidth < 1000){
+    //menuAnimation
     changeMenuIconToggle();
     menuListAnim("100vw",true)
   };
 })
 
+//PROFILE LINK/////////////////////////
 optProfile.addEventListener("click",(e)=>{
   e.preventDefault();
-  const top = window.innerHeight;//(top:105vh);
-  const scrolled = 526;
-  const containerTop = centerFormula(profileContainer,top,scrolled);
-  opacityFn("profileContainer");
-  window.scrollTo({
-    top:`${containerTop}`,
-    behavior:"smooth"
-  });
+
+  //PARALLAX APPLYED
+  if(window.innerWidth >= 1000){
+    const top = window.innerHeight;//(top:105vh);
+    const scrolled = 526;
+    const containerTop = centerFormula(profileContainer,top,scrolled);
+    opacityFn("profileContainer");
+    window.scrollTo({
+      top:`${containerTop}`,
+      behavior:"smooth"
+    });
+  }
+  //PARALLAX NOT APPLYED
   if(window.innerWidth < 1000){
+    const top = (window.innerHeight);//(top:105vh);
+    const containerTop = centerFormulaNoParallax(profileContainer,top)
+    window.scrollTo({
+      top:`${containerTop}`,
+      behavior:"smooth"
+    });
+    //menuAnimation
     changeMenuIconToggle();
     menuListAnim("100vw",true)
   };
 })
 
+//PROYECTS LINK/////////////////////////
 optProyects.addEventListener("click",(e)=>{
   e.preventDefault();
+
+  //PARALLAX APPLYED
   const top = window.innerHeight * 3;//(top:300vh);
   const scrolled = 1500;
   const containerTop = centerFormula(proyectsContainer,top,scrolled);
@@ -149,67 +183,124 @@ optProyects.addEventListener("click",(e)=>{
     top:`${containerTop}`,
     behavior:"smooth"
   });
+
+  //PARALLAX NOT APPLYED
   if(window.innerWidth < 1000){
+    const top = (window.innerHeight * 3);//(top:300vh);
+    const containerTop = centerFormulaNoParallax(proyectsContainer,top)
+    window.scrollTo({
+      top:`${containerTop}`,
+      behavior:"smooth"
+    });
+    //menuAnimation
     changeMenuIconToggle();
     menuListAnim("100vw",true)
   };
 })
 
+//EXPERIENCE LINK/////////////////////////
 optExperience.addEventListener("click",(e)=>{
   e.preventDefault();
+
+  //PARALLAX APPLYED
   const top = window.innerHeight * 5;//(top:500vh);
   const scrolled = 2522;
-  const containerTop = centerFormula(proyectsContainer,top,scrolled);
+  const containerTop = centerFormula(experienceContainer,top,scrolled);
   window.scrollTo({
     top:`${containerTop}`,
     behavior:"smooth"
   });
+
+  //PARALLAX NOT APPLYED
   if(window.innerWidth < 1000){
+    const top = (window.innerHeight * 5);//(top:500vh);
+    const containerTop = centerFormulaNoParallax(experienceContainer,top)
+    window.scrollTo({
+      top:`${containerTop}`,
+      behavior:"smooth"
+    });
+    //menuAnimation
     changeMenuIconToggle();
     menuListAnim("100vw",true)
   };
 })
 
+//SCHOLARSHIP LINK/////////////////////////
 optScholarship.addEventListener("click",(e)=>{
   e.preventDefault();
+
+  //PARALLAX APPLYED
   const top = window.innerHeight * 7;//(top:700vh);
   const scrolled = 3502;
-  const containerTop = centerFormula(proyectsContainer,top,scrolled);
+  const containerTop = centerFormula(scholarshipContainer,top,scrolled);
   window.scrollTo({
     top:`${containerTop}`,
     behavior:"smooth"
   });
+
+  //PARALLAX NOT APPLYED
   if(window.innerWidth < 1000){
+    const top = (window.innerHeight * 7);//(top:700vh);
+    const containerTop = centerFormulaNoParallax(scholarshipContainer,top)
+    window.scrollTo({
+      top:`${containerTop}`,
+      behavior:"smooth"
+    });
+    //menuAnimation
     changeMenuIconToggle();
     menuListAnim("100vw",true)
   };
 })
 
+//AWARDS LINK/////////////////////////
 optAwards.addEventListener("click",(e)=>{
   e.preventDefault();
+
+  //PARALLAX APPLYED
   const top = window.innerHeight * 9;//(top:900vh);
   const scrolled = 4522;
-  const containerTop = centerFormula(proyectsContainer,top,scrolled);
+  const containerTop = centerFormula(awardsContainer,top,scrolled);
   window.scrollTo({
     top:`${containerTop}`,
     behavior:"smooth"
   });
+
+  //PARALLAX NOT APPLYED
   if(window.innerWidth < 1000){
+    const top = (window.innerHeight * 9);//(top:900vh);
+    const containerTop = centerFormulaNoParallax(awardsContainer,top)
+    window.scrollTo({
+      top:`${containerTop}`,
+      behavior:"smooth"
+    });
+    //menuAnimation
     changeMenuIconToggle();
     menuListAnim("100vw",true)
   };
 })
 
+//CONTACT LINK/////////////////////////
 optContact.addEventListener("click",(e)=>{
   e.preventDefault();
+
+  //PARALLAX APPLYED
   const top = window.innerHeight * 11;//(top:1100vh);
   const scrolled = 5509;
-  const containerTop = centerFormula(proyectsContainer,top,scrolled);
+  const containerTop = centerFormula(contactContainer,top,scrolled);
   window.scrollTo({
     top:`${containerTop}`,
     behavior:"smooth"
   });
+
+  //PARALLAX NOT APPLYED
   if(window.innerWidth < 1000){
+    const top = (window.innerHeight * 11);//(top:1100vh);
+    const containerTop = centerFormulaNoParallax(contactContainer,top)
+    window.scrollTo({
+      top:`${containerTop}`,
+      behavior:"smooth"
+    });
+    //menuAnimation
     changeMenuIconToggle();
     menuListAnim("100vw",true)
   };

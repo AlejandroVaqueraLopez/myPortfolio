@@ -10,6 +10,11 @@ router.get("/",(req,res)=>{
 	res.render(path.join(__dirname,"/views/index.ejs"));
 });
 
+//404 not found
+router.use("*",(req,res)=>{
+	res.status(404).render(path.join(__dirname,"/views/pageNotFound.ejs"));
+});
+
 //to get the contact message 
 router.post("/send-email",(req,res)=>{
 
@@ -75,7 +80,13 @@ router.post("/send-email",(req,res)=>{
 	//console.log(req.body);
 	//res.send("Sended");
 	sendMail()
-		.then(result => res.status(200).send("sended"))
+		.then((result) => {
+			if(res.status(200)){
+				res.render(path.join(__dirname,"./views/mailSuccess.ejs"));//emailSuccess.ejs
+			}else{
+				res.render(path.join(__dirname,"./views/mailRejected.ejs"));//emailRejected.ejs
+			}
+		})
 		.catch(err => console.log(err.message));
 });
 

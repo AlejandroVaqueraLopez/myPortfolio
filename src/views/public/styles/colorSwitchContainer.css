@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "AlteHaasGroteskBold";
+  src: url("../fonts/AlteHaasGroteskBold.ttf");
+  font-weight: bold; }
+@font-face {
+  font-family: "AlteHaasGroteskRegular";
+  src: url("../fonts/AlteHaasGroteskRegular.ttf"); }
+.colorSwitchComponent {
+  position: fixed;
+  height: 40px;
+  width: 85px;
+  bottom: 15px;
+  right: 15px;
+  z-index: 2;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  /*for backdrop*/
+  backdrop-filter: blur(8px);
+  /*not working on firefox*/ }
+  .colorSwitchComponent .colorSwitchContainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 30px; }
+    .colorSwitchComponent .colorSwitchContainer .colorSwitchBackContainer {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      padding: 0px 10px;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box; }
+      .colorSwitchComponent .colorSwitchContainer .colorSwitchBackContainer img {
+        width: 35%;
+        height: 55%; }
+    .colorSwitchComponent .colorSwitchContainer .switchBallContainer {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      top: calc((100% / 2) - 50%);
+      left: calc((100% / 2) - 50%);
+      padding: 0px 5px;
+      border-radius: 30px; }
+      .colorSwitchComponent .colorSwitchContainer .switchBallContainer:hover {
+        cursor: pointer; }
+      .colorSwitchComponent .colorSwitchContainer .switchBallContainer .switchBall {
+        position: absolute;
+        top: calc((100% / 2) - 17px);
+        height: 34px;
+        width: 34px;
+        background: #aa00ff;
+        border-radius: 50%;
+        transition: all 0.5s; }
+
+/*# sourceMappingURL=colorSwitchContainer.css.map */
