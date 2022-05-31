@@ -10,11 +10,6 @@ router.get("/",(req,res)=>{
 	res.render(path.join(__dirname,"/views/index.ejs"));
 });
 
-//404 not found
-router.use("*",(req,res)=>{
-	res.status(404).render(path.join(__dirname,"/views/pageNotFound.ejs"));
-});
-
 //to get the contact message 
 router.post("/send-email",(req,res)=>{
 
@@ -88,6 +83,11 @@ router.post("/send-email",(req,res)=>{
 			}
 		})
 		.catch(err => console.log(err.message));
+});
+
+//404 not found
+router.use("*",(req,res)=>{
+	res.status(404).render(path.join(__dirname,"/views/pageNotFound.ejs"));
 });
 
 module.exports = router;
