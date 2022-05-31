@@ -33,4 +33,7 @@ import "./contact.js";
 //color toggle switch engine
 import "./colorSwitch.js";
 
+//To fix mobile virtual keyboard when is opened
+import "./androidVKeyboardFix.js";
+
 
