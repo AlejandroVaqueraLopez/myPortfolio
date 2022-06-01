@@ -227,6 +227,25 @@ let proyectsListData = [
   },
 
   {
+    image:"./public/images/previews/googlePreviewSmall.png",
+    name:"Google clone",
+    info:"A clone of the main layout of google.com made with GRID and FLEXBOX.",
+    techList:[
+      {
+        name:"HTML",
+        icon:"./public/icons/html-icon.png"
+      },
+      {
+        name:"CSS",
+        icon:"./public/icons/css-icon.png"
+      }
+    ],
+    release:"2022",
+    link: "https://navigator.unexlink.co",
+    repository:"https://github.com/AlejandroVaqueraLopez/cloneGoogle"
+  },
+
+  {
     image:"./public/images/previews/whoamiPreviewSmall.jpg",
     name:"Whoami app",
     info:"App that tells the user data about their own current navigator, is loadbalanced by traefik V2.0  (https://scrummer.co/tls) and (http://scrummer.co/notls) paths configured with nginx + Let's Encrypt, all was deployed with kubernetes.",
