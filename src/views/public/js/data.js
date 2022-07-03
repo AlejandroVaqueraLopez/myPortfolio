@@ -112,6 +112,33 @@ let proyectsListData = [
     repository:"https://github.com/AlejandroVaqueraLopez/clonNetflixBootstrap"
   },
 
+  {
+    image:"./public/images/previews/catPagePreviewSmall.png",
+    name:"Cat Page",
+    info:"A landing page store for people who loves pets, here you can find subscription plans (food, toys etc...), I created used my own CDN here to create galleries.",
+    techList:[
+      {
+        name:"CSS",
+        icon:"./public/icons/css-icon.png"
+      },
+      {
+        name:"HTML",
+        icon:"./public/icons/html-icon.png"
+      },
+      {
+        name:"VaqGrid CDN",
+        icon:"./public/icons/cdn-icon.png"
+      },
+      {
+        name:"Javascript",
+        icon:"./public/icons/js-icon.png"
+      }
+    ],
+    release:"2022",
+    link: "https://bancajero.unexlink.co",
+    repository:"https://github.com/AlejandroVaqueraLopez/catPage"
+  },
+
 
   {
     image:"./public/images/previews/bancajeroPreviewSmall.png",
