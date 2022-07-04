@@ -115,7 +115,7 @@ let proyectsListData = [
   {
     image:"./public/images/previews/catPagePreviewSmall.png",
     name:"Cat Page",
-    info:"A landing page store for people who loves pets, here you can find subscription plans (food, toys etc...), I created used my own CDN here to create galleries.",
+    info:"A landing page store for people who loves pets, here you can find subscription plans (food, toys etc...), I created my own CDN that creates image galleries very easy.",
     techList:[
       {
         name:"CSS",
@@ -134,8 +134,8 @@ let proyectsListData = [
         icon:"./public/icons/js-icon.png"
       }
     ],
-    release:"2022",
-    link: "https://bancajero.unexlink.co",
+    release:"2020",
+    link: "https://catpage.unexlink.co",
     repository:"https://github.com/AlejandroVaqueraLopez/catPage"
   },
 
