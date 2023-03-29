@@ -90,29 +90,6 @@ let proyectsListData = [
   },
 
   {
-    image:"./public/images/previews/netflixBootPreviewSmall.png",
-    name:"Netflix Clone (Bootstrap)",
-    info:"The SignUp page of Netflix cloned, a simple responsive and static layout, perfect power example of fast design with bootstrap.",
-    techList:[
-      {
-        name:"Bootstrap",
-        icon:"./public/icons/bootstrap-icon.svg"
-      },
-      {
-        name:"CSS",
-        icon:"./public/icons/css-icon.png"
-      },
-      {
-        name:"HTML",
-        icon:"./public/icons/html-icon.png"
-      }
-    ],
-    release:"2022",
-    link: "https://moviestream.unexlink.co",
-    repository:"https://github.com/AlejandroVaqueraLopez/clonNetflixBootstrap"
-  },
-
-  {
     image:"./public/images/previews/catPagePreviewSmall.png",
     name:"Cat Page",
     info:"A landing page store for people who loves pets, here you can find subscription plans (food, toys etc...), I created my own CDN that creates image galleries very easy.",
@@ -215,7 +192,7 @@ let proyectsListData = [
     ],
     release:"2022",
     link: "https://www.unexlink.co",
-    repository:"https://github.com/AlejandroVaqueraLopez/main-portfolio"
+    repository:"https://github.com/AlejandroVaqueraLopez/myPortfolio"
   },
 
   {
