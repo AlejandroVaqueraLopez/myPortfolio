@@ -2,6 +2,7 @@
 let proyectsListData = [
   {
     image:"./public/images/previews/fitnessGymPreviewSmall.png",
+    imageMobile:"./public/images/previews/fitnessGymPreviewSmall.png",
     name:"FitnessGym landing page",
     info:"Landing page of a gym brand, made with special gray-scale colors combined with Cyan, responsive design and user dynamism.",
     techList:[
@@ -25,6 +26,7 @@ let proyectsListData = [
 
   {
     image:"./public/images/previews/gamespotPreviewSmall.png",
+    imageMobile:"./public/images/previews/fitnessGymPreviewSmall.png",
     name:"GameSpot",
     info:"Game finder by title, creation year, classification and more, choose from more than 150 games and see their most important data.",
     techList:[
@@ -60,6 +62,7 @@ let proyectsListData = [
 
   {
     image:"./public/images/previews/netflixPreviewSmall.png",
+    imageMobile:"./public/images/previews/fitnessGymPreviewSmall.png",
     name:"Netflix Clone",
     info:"The Log-in and Main pages of Netflix cloned, I also used a web server to use some modules, responsive design and carousel of movie previews.",
     techList:[
@@ -91,6 +94,7 @@ let proyectsListData = [
 
   {
     image:"./public/images/previews/catPagePreviewSmall.png",
+    imageMobile:"./public/images/previews/fitnessGymPreviewSmall.png",
     name:"Cat Page",
     info:"A landing page store for people who loves pets, here you can find subscription plans (food, toys etc...), I created my own CDN that creates image galleries very easy.",
     techList:[
@@ -119,6 +123,7 @@ let proyectsListData = [
 
   {
     image:"./public/images/previews/bancajeroPreviewSmall.png",
+    imageMobile:"./public/images/previews/fitnessGymPreviewSmall.png",
     name:"Bancajero (ATM)",
     info:"This proyect is a web page that works as a automated teller machine (ATM) for a fake bank, was made with SCRUM agile methodology, as a user, you can insert/consult or retire money from your own digital wallet account.",
     techList:[
@@ -142,6 +147,7 @@ let proyectsListData = [
 
   {
     image:"./public/images/previews/portfolioPreviewSmall.png",
+    imageMobile:"./public/images/previews/fitnessGymPreviewSmall.png",
     name:"This portfolio",
     info:"This proyect is web page with special design to show my proyects and information about me as a frontend developer. Google email API integrated and styles with scss.",
     techList:[
@@ -197,6 +203,7 @@ let proyectsListData = [
 
   {
     image:"./public/images/previews/rickandmortyPreviewSmall.png",
+    imageMobile:"./public/images/previews/fitnessGymPreviewSmall.png",
     name:"Rick and morty API",
     info:"A web server environment page that contains a carousel with all of “Rick and Morty” characters, extracted from the (Rick and Morty API).",
     techList:[
@@ -232,6 +239,7 @@ let proyectsListData = [
 
   {
     image:"./public/images/previews/googlePreviewSmall.png",
+    imageMobile:"./public/images/previews/fitnessGymPreviewSmall.png",
     name:"Google clone",
     info:"A clone of the main layout of google.com made with GRID and FLEXBOX.",
     techList:[
@@ -251,6 +259,7 @@ let proyectsListData = [
 
   {
     image:"./public/images/previews/whoamiPreviewSmall.jpg",
+    imageMobile:"./public/images/previews/fitnessGymPreviewSmall.png",
     name:"Whoami app",
     info:"App that tells the user data about their own current navigator, is loadbalanced by traefik V2.0  (https://scrummer.co/tls) and (http://scrummer.co/notls) paths configured with nginx + Let's Encrypt, all was deployed with kubernetes.",
     techList:[

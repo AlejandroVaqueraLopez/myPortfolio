@@ -11,6 +11,7 @@
 	background-color:rgba(255,255,255,0.2);/*for backdrop*/
 	backdrop-filter:blur(8px);/*not working on firefox*/
 
+
 	.colorSwitchContainer{
 		height:100%;
 		width:100%;
@@ -31,7 +32,6 @@
 				width:35%;
 				height:55%;
 			}
-
 		}
 
 		.switchBallContainer{
@@ -53,7 +53,7 @@
 				top:calc((100% / 2) - 17px);
 				height:34px;
 				width:34px;
-				background:$purpleBackground;
+				background:#fff;
 				border-radius:50%;
 				transition:all 0.5s;
 			}
