@@ -15,7 +15,7 @@ particlesJS('particles-js',
       "value": "#ffffff"
     },
     "shape": {
-      "type": "circle",
+      "type": "polygon",
       "stroke": {
         "width": 0,
         "color": "#000000"
@@ -40,7 +40,7 @@ particlesJS('particles-js',
       }
     },
     "size": {
-      "value": 20,
+      "value": 50,
       "random": true,
       "anim": {
         "enable": false,
@@ -112,3 +112,7 @@ particlesJS('particles-js',
   },
   "retina_detect": true
 });
+
+function pickParticle(){
+  window.alert("you picked one");
+}

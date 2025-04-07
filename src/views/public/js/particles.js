@@ -7,6 +7,8 @@
 /* v2.0.0
 /* ----------------------------------------------- */
 
+var click_counter = 0;
+
 var pJS = function(tag_id, params){
 
   var canvas_el = document.querySelector('#'+tag_id+' > .particles-js-canvas-el');
@@ -961,6 +963,7 @@ var pJS = function(tag_id, params){
 
       if(pJS.tmp.repulse_clicking){
 
+
         var repulseRadius = Math.pow(pJS.interactivity.modes.repulse.distance/6, 3);
 
         var dx = pJS.interactivity.mouse.click_pos_x - p.x,
@@ -1141,9 +1144,10 @@ var pJS = function(tag_id, params){
               pJS.tmp.bubble_clicking = true;
             break;
 
-            case 'repulse':
+            case 'repulse'://WE ARE WORKING HERE
               pJS.tmp.repulse_clicking = true;
-              pJS.tmp.repulse_count = 0;
+              pJS.tmp.repulse_count = ++click_counter;
+              console.log(pJS.tmp.repulse_count);
               pJS.tmp.repulse_finish = false;
               setTimeout(function(){
                 pJS.tmp.repulse_clicking = false;
